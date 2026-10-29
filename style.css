@@ -3,20 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --cor-cabecalho: #FFFFFF;
-    --cor-primaria: #2F80ED;
-    --cor-primaria-escura: #1C5FBF;
-    --cor-destaque: #DCEBFF;
-    --cor-fundo: #F6F9FE;
-    --cor-texto: #252d3c;
+:root {
+  /* ---------- Marca ---------- */
+  --cor-primaria: #2F80ED;          /* botões, links, destaques */
+  --cor-primaria-escura: #1C5FBF;   /* hover e botões com texto branco */
+  --cor-destaque: #DCEBFF;          /* fundo de item selecionado, chips, avisos leves */
+
+  /* ---------- Fundos e superfícies ---------- */
+  --cor-fundo: #F6F9FE;             /* fundo da página */
+  --cor-cabecalho: #FFFFFF;         /* menu do topo */
+  --cor-superficie: #FFFFFF;        /* cartões e formulários */   /* novo */
+
+  /* ---------- Texto ---------- */
+  --cor-texto: #252D3C;             /* texto principal */
+  --cor-texto-suave: #5B6677;       /* descrições, legendas */      /* novo */
+  --cor-texto-sobre-primaria: #FFFFFF; /* texto dentro de botões */ /* novo */
+
+  /* ---------- Bordas e foco ---------- */
+  --cor-borda: #D6E2F5;             /* linhas e contornos de campos */ /* novo */
+  --cor-foco: #2F80ED;              /* contorno ao navegar pelo teclado */ /* novo */
+
+  /* ---------- Estados ---------- */
+  --cor-sucesso: #17794D;           /* "Consulta marcada", horário livre */ /* novo */
+  --cor-aviso: #F2A33A;             /* avisos */                           /* novo */
+  --cor-erro: #D13438;              /* campo faltando */                   /* novo */
 }
 body{
-    background-color: var(--cor-texto);
-    color: var(--cor-cabecalho);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 nav{
-    background-color: #3b475fef;
+    background-color: var(--cor-cabecalho);
     padding: 20px;
     display: flex;
     align-items: center;
@@ -29,39 +46,86 @@ nav{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: var(--cor-texto-suave);
 }
 a:hover{
-    color: rgb(190, 175, 175);
+    color: var(--cor-texto);
 }
 
 .hero{
-    margin-top: 15%;
+    margin-top: 10%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
-.apresentacao h2{
-    font-size: 2rem;
+.apresentacao h1{
+    font-size: 6rem;
 }
 .apresentacao p{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-button{
-    padding: 5px;
-    background-color: #3b475fef;
-    border: 1px solid;
-    width: 50%;
-}
-.capa{
+.hero img{
+  
+    flex-direction: column;
+    
+    align-items: center;
     background-color: var(--cor-destaque);
     width: 30%;
-    height: 200px;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 100% 100% 5px 5px;
     border: 1px solid;
 }
+button{
+    padding: 5px;
+    background-color: var(--cor-primaria);
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    font-size: 1rem;
+    color: var(--cor-fundo);
+}
+button:hover{
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-texto-sobre-primaria);
+}
+.sobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+.sobre div{
+    background-color: var(--cor-destaque);
+    border-radius: 10px;
+    padding: 20px;
 
+}
+.hero-equipe{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+.hero-equipe h2{
+    margin-left: 9%;
+}
+.equipe{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.doutor-a{
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    text-align: center;
+    
+}
 .como-funciona{
     background-color: var(--cor-primaria);
     border: 1px solid;
