@@ -1,38 +1,70 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
-  /* ---------- Marca ---------- */
-  --cor-primaria: #2F80ED;          /* botões, links, destaques */
-  --cor-primaria-escura: #1C5FBF;   /* hover e botões com texto branco */
-  --cor-destaque: #DCEBFF;          /* fundo de item selecionado, chips, avisos leves */
+    /* ---------- Marca ---------- */
+    --cor-primaria: #2F80ED;
+    /* botões, links, destaques */
+    --cor-primaria-escura: #1C5FBF;
+    /* hover e botões com texto branco */
+    --cor-destaque: #DCEBFF;
+    /* fundo de item selecionado, chips, avisos leves */
 
-  /* ---------- Fundos e superfícies ---------- */
-  --cor-fundo: #F6F9FE;             /* fundo da página */
-  --cor-cabecalho: #FFFFFF;         /* menu do topo */
-  --cor-superficie: #FFFFFF;        /* cartões e formulários */   /* novo */
+    /* ---------- Fundos e superfícies ---------- */
+    --cor-fundo: #F6F9FE;
+    /* fundo da página */
+    --cor-cabecalho: #FFFFFF;
+    /* menu do topo */
+    --cor-superficie: #FFFFFF;
+    /* cartões e formulários */
+    /* novo */
 
-  /* ---------- Texto ---------- */
-  --cor-texto: #252D3C;             /* texto principal */
-  --cor-texto-suave: #5B6677;       /* descrições, legendas */      /* novo */
-  --cor-texto-sobre-primaria: #FFFFFF; /* texto dentro de botões */ /* novo */
+    /* ---------- Texto ---------- */
+    --cor-texto: #252D3C;
+    /* texto principal */
+    --cor-texto-suave: #5B6677;
+    /* descrições, legendas */
+    /* novo */
+    --cor-texto-sobre-primaria: #FFFFFF;
+    /* texto dentro de botões */
+    /* novo */
 
-  /* ---------- Bordas e foco ---------- */
-  --cor-borda: #D6E2F5;             /* linhas e contornos de campos */ /* novo */
-  --cor-foco: #2F80ED;              /* contorno ao navegar pelo teclado */ /* novo */
+    /* ---------- Bordas e foco ---------- */
+    --cor-borda: #D6E2F5;
+    /* linhas e contornos de campos */
+    /* novo */
+    --cor-foco: #2F80ED;
+    /* contorno ao navegar pelo teclado */
+    /* novo */
 
-  /* ---------- Estados ---------- */
-  --cor-sucesso: #17794D;           /* "Consulta marcada", horário livre */ /* novo */
-  --cor-aviso: #F2A33A;             /* avisos */                           /* novo */
-  --cor-erro: #D13438;              /* campo faltando */                   /* novo */
+    /* ---------- Estados ---------- */
+    --cor-sucesso: #17794D;
+    /* "Consulta marcada", horário livre */
+    /* novo */
+    --cor-aviso: #F2A33A;
+    /* avisos */
+    /* novo */
+    --cor-erro: #D13438;
+    /* campo faltando */
+    /* novo */
 }
-body{
+
+body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
 }
-nav{
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o menu fique sempre por cima de tudo */
+}
+
+nav {
     background-color: var(--cor-cabecalho);
     padding: 10px;
     display: flex;
@@ -40,45 +72,53 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-.navegacao{
+
+.navegacao {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-#logo{
+
+#logo {
     width: 10%;
-   
+
 }
-a{
+
+a {
     text-decoration: none;
     color: var(--cor-texto-suave);
 }
-a:hover{
+
+a:hover {
     color: var(--cor-texto);
 }
 
-.corpo{
+.corpo {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.hero{
-    margin-top: 5%;
+
+.hero {
+    margin-top: 120px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 98%;
 }
-.apresentacao h1{
+
+.apresentacao h1 {
     font-size: 6rem;
 }
-.apresentacao p{
+
+.apresentacao p {
     font-size: 1.5rem;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.hero img{
+
+.hero img {
     flex-direction: column;
     align-items: center;
     background-color: var(--cor-destaque);
@@ -88,6 +128,7 @@ a:hover{
     border: 1px solid var(--cor-borda);
     box-shadow: #5b667721 2px 5px 5px 2px;
 }
+
 button{
     padding: 5px;
     background-color: var(--cor-primaria);
@@ -98,28 +139,34 @@ button{
     font-size: 1rem;
     color: var(--cor-fundo);
 }
-button:hover{
+
+button:hover {
     background-color: var(--cor-primaria-escura);
     color: var(--cor-texto-sobre-primaria);
 }
-.hero-equipe{
+
+.hero-equipe {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 70px;
 }
-.equipe-edit{
+
+.equipe-edit {
     width: 83%;
 }
-.hero-equipe h2{
+
+.hero-equipe h2 {
     font-family: 'inter', sans-serif;
 }
-.equipe{
+
+.equipe {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.doutor-a{
+
+.doutor-a {
     width: 200px;
     padding: 20px;
     border-radius: 10px;
@@ -129,15 +176,17 @@ button:hover{
     align-items: center;
     border: 1px solid;
     text-align: center;
-    
+
 }
-.doutor-a img{
+
+.doutor-a img {
     background-color: #F2A33A;
     border-radius: 100%;
     width: 50px;
     height: 50px;
 }
-.especialidades-title{
+
+.especialidades-title {
     margin-top: 2%;
     margin-bottom: 2%;
     margin-left: 8%;
@@ -146,12 +195,14 @@ button:hover{
     font-weight: 900;
     color: var(--cor-texto);
 }
-#especialidades{
+
+#especialidades {
     box-shadow: 0 0 12px rgba(14, 165, 233, 0.5);
     overflow: hidden;
     padding: 20px 0;
 }
-ul{
+
+ul {
     display: flex;
     width: max-content;
     margin: 0;
@@ -159,7 +210,8 @@ ul{
     animation: letreiro 90s linear infinite;
     list-style-type: none;
 }
-li{
+
+li {
     display: flex;
     flex-shrink: 0;
     background-color: var(--cor-destaque);
@@ -172,21 +224,156 @@ li{
     height: 30px;
     border-radius: 5px;
 }
+
 @keyframes letreiro {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
-.como-funciona{
-    background-color: var(--cor-primaria);
-    border: 1px solid;
-    margin-top: 20%;
+
+.agendamento {
+    width: 83%;
+    margin: 70px auto;
+}
+
+.agendamento-title {
+    font-family: 'inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--cor-texto);
     margin-bottom: 20px;
-    padding: 60px;
 }
-.como-funciona h2{
-    margin-bottom: 40px;
+
+.form-agendamento {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 30px;
 }
-.funciona-op{
+
+fieldset {
+    border: none;
+    margin-bottom: 30px;
+}
+
+legend {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* bolinhas do radio ficam escondidas, quem aparece é o span */
+.opcao input,
+.opcao-doutor input {
+    display: none;
+}
+
+.opcoes {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.horarios {
+    margin-top: 15px;
+}
+
+/* especialidades e horarios */
+.opcao span {
+    display: block;
+    padding: 10px 20px;
+    background-color: var(--cor-destaque);
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.opcao span:hover {
+    border-color: var(--cor-primaria);
+}
+
+.opcao input:checked+span {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-sobre-primaria);
+}
+
+.opcao input:disabled+span {
+    background-color: var(--cor-borda);
+    color: var(--cor-texto-suave);
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+
+/* cartao do doutor */
+.opcao-doutor span {
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.opcao-doutor span:hover {
+    border-color: var(--cor-primaria);
+}
+
+.opcao-doutor input:checked+span {
+    border: 2px solid var(--cor-primaria);
+    background-color: var(--cor-destaque);
+}
+
+.opcao-doutor img {
+    background-color: var(--cor-primaria);
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.opcao-doutor small {
+    color: var(--cor-texto-suave);
+}
+
+/* campos */
+.form-agendamento label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.form-agendamento .opcao,
+.form-agendamento .opcao-doutor {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--cor-texto);
+}
+
+input[type="date"] {
+    width: auto;
+}
+
+.botao-confirmar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

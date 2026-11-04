@@ -36,7 +36,7 @@
 
             </section>
         </div>
-        <h2 class = "especialidades-title">Especialidades</h2>
+        <h2 class="especialidades-title">Especialidades</h2>
         <section id="especialidades">
             <ul class="letreiro">
                 <li>Clinica Geral</li>
@@ -46,10 +46,10 @@
                 <li>Ginecologia</li>
                 <li>Ortopedia</li>
                 <li>Psicologia</li>
-                
+
             </ul>
         </section>
-    
+
         <section class="hero-equipe">
             <div class="equipe-edit">
                 <h2>QUEM CUIDA DE VOCÊ</h2> <br> <br>
@@ -72,28 +72,130 @@
                 </div>
 
         </section>
-        
-        <section class="como-funciona">
 
-            <h2> Como funciona <br> do cadastro a primeira <br> reserva em minutos</h2>
+        <section class="agendamento" id="agendamento">
+            <h2 class="agendamento-title">Agende sua Consulta</h2>
 
-            <div class="funciona-op">
-                <div>
-                    <h1>1</h1>
-                    <h3>wefewfw</h3>
-                    <p>loradnqjdiqbdiqwbdiuqbduiqwb <br>iqudwuqidhiuqwdwquduiwqb</p>
+            <form class="form-agendamento">
+
+                <fieldset>
+                    <legend>1. Especialidade</legend>
+                    <div class="opcoes">
+                        <label class="opcao">
+                            <input type="radio" name="especialidade" value="clinica-geral">
+                            <span>Clínica Geral</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="especialidade" value="pediatria">
+                            <span>Pediatria</span>
+                        </label>
+                        <label class="opcao"><input type="radio" name="especialidade" value="cardiologia">
+                            <span>Cardiologia</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="especialidade" value="dermatologia">
+                            <span>Dermatologia</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="especialidade" value="ginecologia">
+                            <span>Ginecologia</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="especialidade" value="ortopedia">
+                            <span>Ortopedia</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="especialidade" value="psicologia"><span>Psicologia</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Profissional</legend>
+                    <div class="opcoes">
+                        <label class="opcao-doutor">
+                            <input type="radio" name="doutor" value="paula">
+                            <span>
+                                <img src="" alt="perfil">
+                                <strong>Dra. Paula Reis</strong>
+                                <small>Clínica geral</small>
+                            </span>
+                        </label>
+
+                        <label class="opcao-doutor">
+                            <input type="radio" name="doutor" value="helena">
+                            <span>
+                                <img src="" alt="perfil">
+                                <strong>Dra. Helena Rocha</strong>
+                                <small>Pediatria</small>
+                            </span>
+                        </label>
+                        <label class="opcao-doutor">
+                            <input type="radio" name="doutor" value="marcos">
+                            <span>
+                                <img src="" alt="perfil">
+                                <strong>Dr. Marcos Lima</strong>
+                                <small>Ginecologia</small>
+                            </span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Data e horário</legend>
+                    <label for="data">Dia da consulta</label>
+                    <input type="date" id="data" name="data">
+
+                    <div class="opcoes horarios">
+                        <label class="opcao">
+                            <input type="radio" name="horario" value="08:00">
+                            <span>08:00</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="horario" value="08:30" disabled>
+                            <span>08:30</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="horario" value="09:00">
+                            <span>09:00</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="horario" value="09:30">
+                            <span>09:30</span></label>
+                        <label class="opcao">
+                            <input type="radio" name="horario" value="10:00"disabled>
+                                <span>10:00</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="horario" value="10:30">
+                            <span>10:30</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="horario" value="14:00">
+                            <span>14:00</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="horario" value="14:30">
+                            <span>14:30</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. Seus dados</legend>
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome">
+
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(75) 90000-0000">
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email">
+                </fieldset>
+                <div class="botao-confirmar">
+                    <button>Confirmar consulta</button>
                 </div>
-                <div>
-                    <h1>2</h1>
-                    <h3>wefewfw</h3>
-                    <p>qndqiwndqindiqdidiqueuqdniqnwd <br> iqwidehihdqwihediwqhfi</p>
-                </div>
-                <div>
-                    <h1>3</h1>
-                    <h3>wefewfw</h3>
-                    <p>ndeiqwdiqudqidiqudhiqudhiqheiuh <br> qihduiqueqidhwqudqwihdq</p>
-                </div>
-            </div>
+            </form>
         </section>
     </main>
     <footer>
