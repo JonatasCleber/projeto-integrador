@@ -102,18 +102,6 @@ button:hover{
     background-color: var(--cor-primaria-escura);
     color: var(--cor-texto-sobre-primaria);
 }
-.sobre{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-}
-.sobre div{
-    background-color: var(--cor-destaque);
-    border-radius: 10px;
-    padding: 20px;
-    width: 95%;
-}
 .hero-equipe{
     display: flex;
     flex-direction: column;
@@ -121,7 +109,7 @@ button:hover{
     margin-top: 70px;
 }
 .equipe-edit{
-    width: 85%;
+    width: 83%;
 }
 .hero-equipe h2{
     font-family: 'inter', sans-serif;
@@ -149,28 +137,44 @@ button:hover{
     width: 50px;
     height: 50px;
 }
-.por-que{
+.especialidades-title{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 8%;
+    font-family: 'inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--cor-texto);
+}
+#especialidades{
+    box-shadow: 0 0 12px rgba(14, 165, 233, 0.5);
+    overflow: hidden;
+    padding: 20px 0;
+}
+ul{
     display: flex;
-    justify-content: center;
-    margin-top: 5%;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    animation: letreiro 90s linear infinite;
+    list-style-type: none;
 }
-.por-que-edit{
-    width: 90%;
-}
-.motivos{
+li{
     display: flex;
-    justify-content: space-between;
-    font-size: 1.4rem;
-}
-.mot-edit{
+    flex-shrink: 0;
     background-color: var(--cor-destaque);
-    border-radius: 30px;
-    border-top: var(--cor-sucesso) 8px solid;
-    border-bottom: 1px solid var(--cor-texto-suave);
-    border-left: 1px solid var(--cor-texto-suave);
-    border-right: 1px solid var(--cor-texto-suave);
-    padding: 20px;
-    margin-top: 10px;
+    color: #0B0F1A;
+    box-shadow: 0 0 12px rgba(14, 165, 233, 0.5);
+    margin: 0 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+@keyframes letreiro {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
 }
 .como-funciona{
     background-color: var(--cor-primaria);
