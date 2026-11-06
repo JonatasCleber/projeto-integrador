@@ -6,143 +6,138 @@
 
 :root {
     /* ---------- Marca ---------- */
-    --cor-primaria: #2F80ED;
-    /* botões, links, destaques */
-    --cor-primaria-escura: #1C5FBF;
-    /* hover e botões com texto branco */
-    --cor-destaque: #DCEBFF;
-    /* fundo de item selecionado, chips, avisos leves */
+    --cor-primaria: #1C5FBF;
+    --cor-primaria-escura: #174C97;
+    --cor-destaque: #C9DDF8;
 
     /* ---------- Fundos e superfícies ---------- */
-    --cor-fundo: #F6F9FE;
-    /* fundo da página */
-    --cor-cabecalho: #FFFFFF;
-    /* menu do topo */
-    --cor-superficie: #FFFFFF;
-    /* cartões e formulários */
-    /* novo */
+    --cor-fundo: #E9EFF9;
+    --cor-cabecalho: #F5F8FD;
+    --cor-superficie: #F5F8FD;
+    --cor-campo: #FFFFFF;
+    --cor-desabilitado: #DCE4F2;
 
     /* ---------- Texto ---------- */
-    --cor-texto: #252D3C;
-    /* texto principal */
-    --cor-texto-suave: #5B6677;
-    /* descrições, legendas */
-    /* novo */
+    --cor-texto: #1F2634;
+    --cor-texto-suave: #4F5A6C;
     --cor-texto-sobre-primaria: #FFFFFF;
-    /* texto dentro de botões */
-    /* novo */
 
     /* ---------- Bordas e foco ---------- */
-    --cor-borda: #D6E2F5;
-    /* linhas e contornos de campos */
-    /* novo */
+    --cor-borda: #C2D1EA;
     --cor-foco: #2F80ED;
-    /* contorno ao navegar pelo teclado */
-    /* novo */
 
     /* ---------- Estados ---------- */
     --cor-sucesso: #17794D;
-    /* "Consulta marcada", horário livre */
-    /* novo */
     --cor-aviso: #F2A33A;
-    /* avisos */
-    /* novo */
     --cor-erro: #D13438;
-    /* campo faltando */
-    /* novo */
 }
-
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-}
-header {
+    background: linear-gradient(180deg, #F5F8FD 0%, #E9EFF9 50%, #C9DDF8 100%);
+    background-attachment: fixed;
+    color: var(--cor-texto)
+}header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Garante que o menu fique sempre por cima de tudo */
+    z-index: 1000;
+    background-color: rgba(14, 28, 64, 0.55);
+    backdrop-filter: blur(6px);
 }
 
 nav {
-    background-color: var(--cor-cabecalho);
-    padding: 10px;
+    background-color: transparent;
+    border: none;
+    padding: 12px 6%;
     display: flex;
-    border: 1px solid var(--cor-borda);
     align-items: center;
     justify-content: space-between;
 }
 
 .navegacao {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    gap: 40px;
 }
 
 #logo {
-    width: 10%;
-
+    width: 60px;
 }
 
-a {
+nav a {
+    color: #fff;
+    font-weight: 500;
+    padding-bottom: 3px;
     text-decoration: none;
-    color: var(--cor-texto-suave);
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
 }
 
-a:hover {
-    color: var(--cor-texto);
+nav a:hover {
+    color: #fff;
+    border-bottom-color: var(--cor-aviso);
 }
-
-.corpo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .hero {
-    margin-top: 120px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 98%;
+    width: 100%;
+    min-height: 600px;
+    padding: 80px 6% 0;
+    background:
+        linear-gradient(90deg, rgba(14, 28, 64, 0.9) 0%, rgba(14, 28, 64, 0.5) 60%, rgba(14, 28, 64, 0.1) 100%),
+        radial-gradient(circle at 80% 28%, #F2A33A 0, transparent 34%),
+        radial-gradient(circle at 92% 78%, #2FD0B5 0, transparent 38%),
+        radial-gradient(circle at 62% 95%, #6AA6F8 0, transparent 45%),
+        #1C5FBF;
 }
 
-.apresentacao h1 {
-    font-size: 6rem;
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    max-width: 620px;
 }
 
-.apresentacao p {
-    font-size: 1.5rem;
-    margin-top: 10px;
+.etiqueta {
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #FFD08A;
     margin-bottom: 10px;
 }
 
-.hero img {
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--cor-destaque);
-    width: 30%;
-    height: auto;
-    border-radius: 100% 100% 5px 5px;
-    border: 1px solid var(--cor-borda);
-    box-shadow: #5b667721 2px 5px 5px 2px;
+.apresentacao h1 {
+    font-size: 3.7rem;
+    line-height: 1.1;
+    font-weight: 900;
+    color: #fff;
 }
 
-button{
-    padding: 5px;
-    background-color: var(--cor-primaria);
-    border: 1px solid;
+.apresentacao p {
+    font-size: 1.3rem;
+    margin: 18px 0 28px;
+    color: #E6EEFB;
+}
+
+.botoes {
+    display: flex;
+}
+
+
+.botao-borda {
+    width: auto;
+    padding: 16px 30px;
     border-radius: 10px;
-    padding: 20px;
-    width: 50%;
-    font-size: 1rem;
-    color: var(--cor-fundo);
+    font-weight: 700;
+    margin-right: 14px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
 }
 
-button:hover {
-    background-color: var(--cor-primaria-escura);
-    color: var(--cor-texto-sobre-primaria);
+.botao-borda:hover {
+    background-color: #fff;
+    color: var(--cor-primaria);
 }
 
 .hero-equipe {
@@ -196,43 +191,21 @@ button:hover {
     color: var(--cor-texto);
 }
 
-#especialidades {
-    box-shadow: 0 0 12px rgba(14, 165, 233, 0.5);
-    overflow: hidden;
-    padding: 20px 0;
-}
-
 ul {
     display: flex;
-    width: max-content;
-    margin: 0;
-    padding: 0;
-    animation: letreiro 90s linear infinite;
     list-style-type: none;
 }
 
 li {
     display: flex;
-    flex-shrink: 0;
     background-color: var(--cor-destaque);
     color: #0B0F1A;
-    box-shadow: 0 0 12px rgba(14, 165, 233, 0.5);
-    margin: 0 10px;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 30px;
+    width: 400px;
+    height: 100px;
+    border: 1px solid ;
     border-radius: 5px;
-}
-
-@keyframes letreiro {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
 }
 
 .agendamento {
