@@ -192,7 +192,12 @@ nav a:hover {
 }
 
 ul {
-    display: flex;
+    display: grid;
+    /* Cria 4 colunas de tamanhos iguais */
+    grid-template-columns: repeat(4, 1fr); 
+    /* Espaçamento de 20px entre os cards */
+    gap: 20px; 
+    padding: 20px;
     list-style-type: none;
 }
 
@@ -202,7 +207,7 @@ li {
     color: #0B0F1A;
     justify-content: center;
     align-items: center;
-    width: 400px;
+    width: 300px;
     height: 100px;
     border: 1px solid ;
     border-radius: 5px;
